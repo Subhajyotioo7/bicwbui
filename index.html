@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Pratyusha 🎉</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      border-radius: 25px;
+      padding: 2rem 3rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      z-index: 10;
+      max-width: 90%;
+      width: 400px;
+      animation: floatCard 6s ease-in-out infinite;
+    }
+
+    .card h1 {
+      font-size: 2.5rem;
+      color: #e91e63;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #ff80ab;
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      color: #c2185b;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #6d4c41;
+      margin-top: 10px;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      background: radial-gradient(circle at 30% 30%, #ff4081, #f06292);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      animation: rise 10s linear infinite;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: #8d6e63;
+      transform: translateX(-50%);
+    }
+
+    .balloon:nth-child(1) {
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    .balloon:nth-child(2) {
+      left: 50%;
+      animation-delay: 2s;
+    }
+
+    .balloon:nth-child(3) {
+      left: 75%;
+      animation-delay: 4s;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive Text */
+    @media (max-width: 500px) {
+      .card h1 {
+        font-size: 2rem;
+      }
+      .card h2 {
+        font-size: 1.2rem;
+      }
+      .card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Balloons 🎈 -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+
+  <!-- Birthday Card -->
+  <div class="card">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <h2>Pratyusha Kar</h2>
+    <p>May your smile shine brighter than the candles on your cake!</p>
+    <p>Wishing you endless joy, laughter, and magical moments today 💖</p>
+  </div>
+
+  <!-- Background Music (Optional) -->
+  <!--
+  <audio autoplay loop>
+    <source src="your-birthday-song.mp3" type="audio/mpeg">
+  </audio>
+  -->
+
+</body>
+</html>
